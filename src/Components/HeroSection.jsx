@@ -79,8 +79,8 @@ const HeroSection = ({ tableData, setTableData }) => {
       )}
       {/* Form Filling Section */}
       {getStarted && (
-        <div className="w-[100vw] h-[100vh] z-50 absolute backdrop-blur-xs flex justify-center items-center">
-          <div className="p-5 bg-white space-y-2 overflow-y-auto">
+        <div className="w-[100vw] h-[100vh] z-50 absolute backdrop-blur-xs flex justify-center items-center ">
+          <div className="p-5 bg-white space-y-2 overflow-y-auto ">
             <div className="flex justify-between">
               <h1 className="text-2xl font-semibold">Get Started Today!</h1>
               <button
@@ -136,72 +136,65 @@ const HeroSection = ({ tableData, setTableData }) => {
               <div>
                 <h1 className="text-lg font-semibold">Gender</h1>
                 <div className="flex gap-2">
-                  <div className="flex gap-2 p-3 pr-8 bg-[#FFDEE287] rounded-md">
+                  <label className="flex gap-2 p-3 pr-8 bg-[#FFDEE287] rounded-md cursor-pointer">
                     <input
                       type="radio"
                       value="Male"
                       id="gender1"
                       name="gender"
                       onChange={onChangeHandler}
+                      className="cursor-pointer checked:accent-[#FF3E54]"
                     />
-                    <label htmlFor="gender1" className="text-[#424242CC]">
-                      Male
-                    </label>
-                  </div>
-                  <div className="flex gap-2 p-3 pr-8 bg-[#FFDEE287] rounded-md">
+                    <span className="text-[#424242CC]">Male</span>
+                  </label>
+
+                  <label className="flex gap-2 p-3 pr-8 bg-[#FFDEE287] rounded-md cursor-pointer">
                     <input
                       type="radio"
                       value="Female"
                       id="gender2"
                       name="gender"
-                      className="checked:accent-[#FF3E54]"
                       onChange={onChangeHandler}
+                      className="cursor-pointer checked:accent-[#FF3E54]"
                     />
-                    <label htmlFor="gender2" className="text-[#424242CC]">
-                      Female
-                    </label>
-                  </div>
+                    <span className="text-[#424242CC]">Female</span>
+                  </label>
                 </div>
               </div>
               <div>
                 <h1 className="text-lg font-semibold">Languages</h1>
                 <div className="space-y-2">
-                  <div className="w-[150px] p-3 bg-[#FFDEE287] rounded-md ">
+                  <label className="flex items-center w-[150px] p-3 bg-[#FFDEE287] rounded-md cursor-pointer">
                     <input
                       type="checkbox"
-                      id="scales"
+                      id="English"
                       name="English"
-                      className="checked:accent-[#FF3E54]"
+                      className="cursor-pointer checked:accent-[#FF3E54]"
                       onChange={() => handleLanguageChange("English")}
                     />
-                    <label for="English" className="ml-2 text-[#424242CC]">
-                      English
-                    </label>
-                  </div>
-                  <div className="w-[150px] p-3 bg-[#FFDEE287] rounded-md">
+                    <span className="ml-2 text-[#424242CC]">English</span>
+                  </label>
+                  <label className="flex items-center w-[150px] p-3 bg-[#FFDEE287] rounded-md cursor-pointer">
                     <input
                       type="checkbox"
-                      id="scales"
+                      id="Hindi"
                       name="Hindi"
-                      className="checked:accent-[#FF3E54]"
+                      className="cursor-pointer checked:accent-[#FF3E54]"
                       onChange={() => handleLanguageChange("Hindi")}
+                      checked={formData.language.includes("Hindi")}
                     />
-                    <label for="Hindi" className="ml-2 text-[#424242CC]">
-                      Hindi
-                    </label>
-                  </div>
-                  <div className="w-[150px] p-3 bg-[#FFDEE287] rounded-md">
+                    <span className="ml-2 text-[#424242CC]">Hindi</span>
+                  </label>
+                  <label className="flex items-center w-[150px] p-3 bg-[#FFDEE287] rounded-md cursor-pointer">
                     <input
                       type="checkbox"
-                      id="scales"
-                      name="Marathi"
-                      className="checked:accent-[#FF3E54]"
+                      id="Hindi"
+                      name="Hindi"
+                      className="cursor-pointer checked:accent-[#FF3E54]"
                       onChange={() => handleLanguageChange("Marathi")}
                     />
-                    <label for="Marathi" className="ml-2 text-[#424242CC]">
-                      Marathi
-                    </label>
-                  </div>
+                    <span className="ml-2 text-[#424242CC]">Marathi</span>
+                  </label>
                 </div>
               </div>
               <div>
@@ -227,7 +220,7 @@ const HeroSection = ({ tableData, setTableData }) => {
                 </label>
               </div>
               <button
-                className="w-full text-center p-4 bg-[#FF3E54] rounded-md"
+                className="w-full text-center p-4 bg-[#FF3E54] rounded-md cursor-pointer"
                 type="submit"
               >
                 Done
@@ -430,11 +423,11 @@ const HeroSection = ({ tableData, setTableData }) => {
         </div>
         {/* Logo Portion */}
         <div className="flex flex-wrap gap-10 justify-center my-4 pb-3">
-        <Facebook />
-        <Google />
-        <Youtube />
-        <Pinterest />
-        <Twich />
+          <Facebook />
+          <Google />
+          <Youtube />
+          <Pinterest />
+          <Twich />
         </div>
       </div>
     </div>

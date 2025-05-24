@@ -4,8 +4,11 @@ const TableContent = ({ tableData }) => {
   return (
     <>
       {tableData.length > 0 && (
-        <div className="px-2 sm:px-8 md:px-16 my-9">
-          <table className="w-full  overflow-auto shadow-2xl shadow-[#F5F5F5]">
+        <div className="px-2 sm:px-8 md:px-16 my-9 overflow-x-auto">
+          <div className="min-w-[500px]">
+
+          
+          <table className="w-full shadow-2xl shadow-[#F5F5F5]">
             <thead>
               <tr className="bg-[#F5F5F5] border-b border-[#E1CFFF]">
                 <th className="p-2  rounded-tl-md">Name</th>
@@ -28,6 +31,7 @@ const TableContent = ({ tableData }) => {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       )}
     </>
